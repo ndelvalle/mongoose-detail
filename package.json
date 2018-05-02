@@ -1,0 +1,43 @@
+{
+  "name": "mongoose-detail",
+  "version": "0.0.2",
+  "description": "Mongoose plugin to expose schema definitions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "format:changed": "pretty-quick",
+    "format:staged": "pretty-quick --staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndelvalle/mongoose-detail.git"
+  },
+  "author": "ndelvalle <nicolas.delvalle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndelvalle/mongoose-detail/issues"
+  },
+  "homepage": "https://github.com/ndelvalle/mongoose-detail#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
+  },
+  "pre-commit": [
+    "format:staged",
+    "lint",
+    "test"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "dot-prop": "^4.2.0"
+  }
+}
