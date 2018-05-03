@@ -1,6 +1,6 @@
 {
   "name": "mongoose-detail",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mongoose plugin to expose schema definitions",
   "main": "index.js",
   "scripts": {
