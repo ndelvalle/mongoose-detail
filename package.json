@@ -1,6 +1,6 @@
 {
   "name": "mongoose-detail",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Mongoose plugin to expose schema definitions programmatically",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,11 @@
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
   },
-  "pre-commit": ["format:staged", "lint", "test"],
+  "pre-commit": [
+    "format:staged",
+    "lint",
+    "test"
+  ],
   "engines": {
     "node": ">=4"
   },
