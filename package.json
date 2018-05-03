@@ -1,7 +1,7 @@
 {
   "name": "mongoose-detail",
   "version": "0.0.3",
-  "description": "Mongoose plugin to expose schema definitions",
+  "description": "Mongoose plugin to expose schema definitions programmatically",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .js",

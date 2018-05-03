@@ -21,12 +21,12 @@ $ yarn add mongoose-detail
 const mongooseDetail = require('mongoose-detail')
 const mongoose = require('mongoose')
 
-var kittySchema = mongoose.Schema({
+const kittySchema = mongoose.Schema({
   name: { type: String, required: true, unique: true },
   age: { type: Number },
 })
 
-var Kitten = mongoose.model('Kitten', kittySchema)
+const Kitten = mongoose.model('Kitten', kittySchema)
 
 Kitten.plugin(mongooseDetail, {
   skip: ['_id', '__v'], // Optional Properties to skip. The default value is []
