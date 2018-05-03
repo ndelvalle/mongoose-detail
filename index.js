@@ -1,47 +1,38 @@
 const dotProp = require('dot-prop')
 
-function buildDefinition(options) {
-  if (Array.isArray(options)) {
-    return options.map((attr) => buildDefinition(attr))
-  }
-  if (Array.isArray(options.type)) {
-    const attributes = options.type
-    return attributes.map((attr) => buildDefinition(attr))
-  }
-  if (options.type) {
-    return Object.assign({}, options, { type: options.type.name })
-  }
-  return Object.keys(options).reduce((result, key) => {
-    result[key] = buildDefinition(options[key])
-    return result
-  }, {})
-}
-
 function MongooseDetail(schema, configuration) {
   const config = configuration || {}
   const skip = config.skip || []
-  const staticName = config.name || 'detail'
+  const name = config.name || 'detail'
 
-  const detail = () => {
-    const paths = Object.keys(schema.paths)
-    return paths.reduce((result, key) => {
-      if (skip.includes(key)) {
-        return result
+  const detail = {}
+
+  function buildDefinition(schema) {
+    for (const key in schema.paths) {
+      if (schema.paths[key].schema) {
+        return buildDefinition(schema.paths[key].schema)
+      }
+      const { path, options } = schema.paths[key]
+      if (skip.includes(path)) {
+        continue
       }
 
-      const { options } = schema.paths[key]
-      const definition = buildDefinition(options)
-
-      if (key.includes('.')) {
-        dotProp.set(result, key, definition)
+      let opts
+      let definition
+      if (Array.isArray(options.type)) {
+        // Note: Support empty array definitions
+        opts = options.type.length === 0 ? options.type : options.type[0]
+        definition = opts.type ? Object.assign({}, opts, { type: opts.type.name }) : opts
       } else {
-        result[key] = definition
+        definition = Object.assign({}, options, { type: options.type.name })
       }
-      return result
-    }, {})
+
+      dotProp.set(detail, path, definition)
+    }
   }
 
-  schema.statics[staticName] = () => detail()
+  buildDefinition(schema)
+  schema.statics[name] = () => detail
 }
 
 module.exports = MongooseDetail
