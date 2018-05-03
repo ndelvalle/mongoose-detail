@@ -1,3 +1,41 @@
 # mongoose-detail
 
-Mongoose plugin to expose schema definitions
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/295b87fd948a45cca4ae3e0a9c22235c)](https://www.codacy.com/app/ndelvalle/mongoose-detail?utm_source=github.com&utm_medium=referral&utm_content=ndelvalle/mongoose-detail&utm_campaign=Badge_Grade)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-green)](https://github.com/prettier/prettier)
+
+Mongoose plugin to expose schema definitions programmatically
+
+## Install
+
+```bash
+$ npm install --save mongoose-detail
+```
+
+```bash
+$ yarn add mongoose-detail
+```
+
+## Use
+
+```javascript
+const mongooseDetail = require('mongoose-detail')
+const mongoose = require('mongoose')
+
+var kittySchema = mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  age: { type: Number },
+})
+
+var Kitten = mongoose.model('Kitten', kittySchema)
+
+Kitten.plugin(mongooseDetail, {
+  skip: ['_id', '__v'], // Optional Properties to skip. The default value is []
+  name: 'detail', // Optional static function name. The default value is 'detail'
+})
+
+Kitten.detail()
+//  {
+//    name: { type: String, required: true, unique: true },
+//    age: { type: Number },
+//  }
+```
