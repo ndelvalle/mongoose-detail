@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/ndelvalle/mongoose-detail#readme",
   "dependencies": {
-    "dot-prop": "^4.2.0",
-    "lodash.isnative": "^4.0.1"
+    "dot-prop": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
