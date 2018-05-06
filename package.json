@@ -1,6 +1,6 @@
 {
   "name": "mongoose-detail",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Mongoose plugin to expose schema definitions programmatically",
   "main": "lib/index.js",
   "scripts": {
@@ -48,12 +48,22 @@
         "statements": 70
       }
     },
-    "collectCoverageFrom": ["lib/**"],
-    "roots": ["test/"]
+    "collectCoverageFrom": [
+      "lib/**"
+    ],
+    "roots": [
+      "test/"
+    ]
   },
-  "pre-commit": ["format:staged", "lint", "test"],
+  "pre-commit": [
+    "format:staged",
+    "lint",
+    "test"
+  ],
   "engines": {
     "node": ">=4"
   },
-  "keywords": ["mongoose"]
+  "keywords": [
+    "mongoose"
+  ]
 }
