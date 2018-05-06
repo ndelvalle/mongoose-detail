@@ -26,12 +26,12 @@ const kittySchema = mongoose.Schema({
   age: { type: Number },
 })
 
-const Kitten = mongoose.model('Kitten', kittySchema)
-
-Kitten.plugin(mongooseDetail, {
+kittySchema.plugin(mongooseDetail, {
   skip: ['_id', '__v'], // Optional Properties to skip. The default value is []
   name: 'detail', // Optional static function name. The default value is 'detail'
 })
+
+const Kitten = mongoose.model('Kitten', kittySchema)
 
 Kitten.detail()
 //  {

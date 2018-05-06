@@ -2,8 +2,11 @@
   "name": "mongoose-detail",
   "version": "0.0.4",
   "description": "Mongoose plugin to expose schema definitions programmatically",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "test": "jest --coverage",
+    "test:inspect": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "cover": "open coverage/lcov-report/index.html",
     "lint": "eslint . --ext .js",
     "format": "prettier --write '**/*.{js,json,md}'",
     "format:changed": "pretty-quick",
@@ -19,6 +22,10 @@
     "url": "https://github.com/ndelvalle/mongoose-detail/issues"
   },
   "homepage": "https://github.com/ndelvalle/mongoose-detail#readme",
+  "dependencies": {
+    "dot-prop": "^4.2.0",
+    "lodash.isnative": "^4.0.1"
+  },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -26,18 +33,27 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-prettier": "^2.6.0",
     "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "mongoose": "^5.0.17",
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
   },
-  "pre-commit": [
-    "format:staged",
-    "lint",
-    "test"
-  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    },
+    "collectCoverageFrom": ["lib/**"],
+    "roots": ["test/"]
+  },
+  "pre-commit": ["format:staged", "lint", "test"],
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {
-    "dot-prop": "^4.2.0"
-  }
+  "keywords": ["mongoose"]
 }

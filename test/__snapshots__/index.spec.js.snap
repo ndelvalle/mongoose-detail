@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mongoose-detail -> plugin plugin expose the schema definition using the detail static function 1`] = `
+Object {
+  "__v": Object {
+    "type": "Number",
+  },
+  "_id": Object {
+    "auto": true,
+    "type": "ObjectId",
+  },
+  "age": Object {
+    "max": 65,
+    "min": 18,
+    "type": "Number",
+  },
+  "arrayOfArrayOfNumbers": Array [
+    Array [
+      Object {
+        "type": "Number",
+      },
+    ],
+  ],
+  "arrayOfArrays": Array [
+    Array [
+      undefined,
+    ],
+  ],
+  "arrayOfBoolean": Array [
+    Object {
+      "type": "Boolean",
+    },
+  ],
+  "arrayOfBuffer": Array [
+    Object {
+      "type": "Buffer",
+    },
+  ],
+  "arrayOfDates": Array [
+    Object {
+      "type": "Date",
+    },
+  ],
+  "arrayOfMixed": Array [
+    Object {
+      "type": "Mixed",
+    },
+  ],
+  "arrayOfNumber": Array [
+    Object {
+      "type": "Number",
+    },
+  ],
+  "arrayOfObjectId": Array [
+    Object {
+      "type": "ObjectId",
+    },
+  ],
+  "arrayOfString": Array [
+    Object {
+      "type": "String",
+    },
+  ],
+  "createdAt": Object {
+    "default": [Function],
+    "type": "Date",
+  },
+  "email": Object {
+    "lowercase": true,
+    "trim": true,
+    "type": "String",
+  },
+  "metaData": Object {
+    "address": Object {
+      "type": "String",
+    },
+    "binary": Object {
+      "type": "Buffer",
+    },
+    "connectInfo": Object {
+      "address": Object {
+        "city": Object {
+          "type": "String",
+        },
+        "street": Object {
+          "type": "String",
+        },
+      },
+      "emails": Array [
+        Object {
+          "type": "String",
+        },
+      ],
+      "isFromArgentina": Object {
+        "type": "Boolean",
+      },
+      "phones": Array [
+        Object {
+          "type": "Number",
+        },
+      ],
+    },
+    "nested": Object {
+      "stuff": Object {
+        "lowercase": true,
+        "trim": true,
+        "type": "String",
+      },
+    },
+    "type": Object {
+      "isFoo": Object {
+        "type": "Boolean",
+      },
+    },
+  },
+  "name": Object {
+    "required": true,
+    "type": "String",
+    "unique": true,
+  },
+  "pets": Array [
+    Object {
+      "ref": "Pet",
+      "type": "ObjectId",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "isBocaJuniors": Object {
+        "default": true,
+        "type": "Boolean",
+      },
+      "ref": Object {
+        "ref": "Team",
+        "type": "Object",
+      },
+    },
+  ],
+}
+`;
+
+exports[`mongoose-detail -> plugin plugin options skip skips attributes defined in the options 1`] = `
+Object {
+  "__v": Object {
+    "type": "Number",
+  },
+  "age": Object {
+    "max": 65,
+    "min": 18,
+    "type": "Number",
+  },
+  "arrayOfArrayOfNumbers": Array [
+    Array [
+      Object {
+        "type": "Number",
+      },
+    ],
+  ],
+  "arrayOfArrays": Array [
+    Array [
+      undefined,
+    ],
+  ],
+  "arrayOfBoolean": Array [
+    Object {
+      "type": "Boolean",
+    },
+  ],
+  "arrayOfBuffer": Array [
+    Object {
+      "type": "Buffer",
+    },
+  ],
+  "arrayOfDates": Array [
+    Object {
+      "type": "Date",
+    },
+  ],
+  "arrayOfMixed": Array [
+    Object {
+      "type": "Mixed",
+    },
+  ],
+  "arrayOfNumber": Array [
+    Object {
+      "type": "Number",
+    },
+  ],
+  "arrayOfObjectId": Array [
+    Object {
+      "type": "ObjectId",
+    },
+  ],
+  "arrayOfString": Array [
+    Object {
+      "type": "String",
+    },
+  ],
+  "createdAt": Object {
+    "default": [Function],
+    "type": "Date",
+  },
+  "email": Object {
+    "lowercase": true,
+    "trim": true,
+    "type": "String",
+  },
+  "pets": Array [
+    Object {
+      "ref": "Pet",
+      "type": "ObjectId",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "isBocaJuniors": Object {
+        "default": true,
+        "type": "Boolean",
+      },
+      "ref": Object {
+        "ref": "Team",
+        "type": "Object",
+      },
+    },
+  ],
+}
+`;
+
+exports[`mongoose-detail -> plugin typeMap uses the specified type map function instead of the default 1`] = `
+Object {
+  "__v": Object {
+    "type": "Number - Foo",
+  },
+  "_id": Object {
+    "auto": true,
+    "type": "ObjectId - Foo",
+  },
+  "age": Object {
+    "max": 65,
+    "min": 18,
+    "type": "Number - Foo",
+  },
+  "arrayOfArrayOfNumbers": Array [
+    Array [
+      Object {
+        "type": "Number - Foo",
+      },
+    ],
+  ],
+  "arrayOfArrays": Array [
+    Array [
+      undefined,
+    ],
+  ],
+  "arrayOfBoolean": Array [
+    Object {
+      "type": "Boolean - Foo",
+    },
+  ],
+  "arrayOfBuffer": Array [
+    Object {
+      "type": "Buffer - Foo",
+    },
+  ],
+  "arrayOfDates": Array [
+    Object {
+      "type": "Date - Foo",
+    },
+  ],
+  "arrayOfMixed": Array [
+    Object {
+      "type": "Mixed - Foo",
+    },
+  ],
+  "arrayOfNumber": Array [
+    Object {
+      "type": "Number - Foo",
+    },
+  ],
+  "arrayOfObjectId": Array [
+    Object {
+      "type": "ObjectId - Foo",
+    },
+  ],
+  "arrayOfString": Array [
+    Object {
+      "type": "String - Foo",
+    },
+  ],
+  "createdAt": Object {
+    "default": [Function],
+    "type": "Date - Foo",
+  },
+  "email": Object {
+    "lowercase": true,
+    "trim": true,
+    "type": "String - Foo",
+  },
+  "metaData": Object {
+    "address": Object {
+      "type": "String - Foo",
+    },
+    "binary": Object {
+      "type": "Buffer - Foo",
+    },
+    "connectInfo": Object {
+      "address": Object {
+        "city": Object {
+          "type": "String - Foo",
+        },
+        "street": Object {
+          "type": "String - Foo",
+        },
+      },
+      "emails": Array [
+        Object {
+          "type": "String - Foo",
+        },
+      ],
+      "isFromArgentina": Object {
+        "type": "Boolean - Foo",
+      },
+      "phones": Array [
+        Object {
+          "type": "Number - Foo",
+        },
+      ],
+    },
+    "nested": Object {
+      "stuff": Object {
+        "lowercase": true,
+        "trim": true,
+        "type": "String - Foo",
+      },
+    },
+    "type": Object {
+      "isFoo": Object {
+        "type": "Boolean - Foo",
+      },
+    },
+  },
+  "name": Object {
+    "required": true,
+    "type": "String - Foo",
+    "unique": true,
+  },
+  "pets": Array [
+    Object {
+      "ref": "Pet",
+      "type": "ObjectId - Foo",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "isBocaJuniors": Object {
+        "default": true,
+        "type": "Boolean - Foo",
+      },
+      "ref": Object {
+        "ref": "Team",
+        "type": "Object - Foo",
+      },
+    },
+  ],
+}
+`;
