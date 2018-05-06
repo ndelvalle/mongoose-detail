@@ -1,5 +1,7 @@
 # mongoose-detail
 
+[ ![Codeship Status for ndelvalle/mongoose-detail](https://app.codeship.com/projects/d68c0940-3327-0136-6fb9-0e05c0ab05bf/status?branch=master)](https://app.codeship.com/projects/288940)
+[![Coverage Status](https://coveralls.io/repos/github/ndelvalle/mongoose-detail/badge.svg?branch=master)](https://coveralls.io/github/ndelvalle/mongoose-detail?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/295b87fd948a45cca4ae3e0a9c22235c)](https://www.codacy.com/app/ndelvalle/mongoose-detail?utm_source=github.com&utm_medium=referral&utm_content=ndelvalle/mongoose-detail&utm_campaign=Badge_Grade)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-green)](https://github.com/prettier/prettier)
 
