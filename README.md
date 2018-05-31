@@ -37,7 +37,7 @@ const Kitten = mongoose.model('Kitten', kittySchema)
 
 Kitten.detail()
 //  {
-//    name: { type: String, required: true, unique: true },
-//    age: { type: Number },
+//    name: { type: 'String', required: true, unique: true },
+//    age: { type: 'Number' },
 //  }
 ```
